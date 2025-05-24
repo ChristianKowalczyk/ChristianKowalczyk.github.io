@@ -1,4 +1,29 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <h1>Christian Kowalczyk</h1>
-<img src="gif.gif" alt="A stunning lake" width="300" height="300">
+<div class="container">
+    <img src="gif.gif" alt="A stunning lake" width="300" height="300" id="randomGif">
+    <button onclick="changeGif()" class="refresh-button">⟳</button>
+</div>
 <br>
 <a href="https://github.com/ChristianKowalczyk?tab=repositories" target="_blank">GitHub Repos</a>
+
+<script>
+    const gifs = [
+        'gif.gif',
+        'gif2.gif',
+        'gif3.gif',
+        // Add more GIFs to this array
+    ];
+    let currentIndex = 0;
+
+    function changeGif() {
+        currentIndex = (currentIndex + 1) % gifs.length;
+        document.getElementById('randomGif').src = gifs[currentIndex];
+    }
+</script>
+</body>
+</html>
