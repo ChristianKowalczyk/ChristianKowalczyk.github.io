@@ -6,7 +6,7 @@
 <h1>Christian Kowalczyk</h1>
 <div class="container">
     <img src="gif.gif" alt="A stunning lake" width="300" height="300" id="randomGif">
-    <button onclick="changeGif()" class="refresh-button">⟳</button>
+    <button onclick="changeGif()" class="refresh-button" id="refreshButton">⟳</button>
 </div>
 <br>
 <a href="https://github.com/ChristianKowalczyk?tab=repositories" target="_blank">GitHub Repos</a>
@@ -21,8 +21,16 @@
     let currentIndex = 0;
 
     function changeGif() {
+        const button = document.getElementById('refreshButton');
+        button.classList.add('spinning');
+        
         currentIndex = (currentIndex + 1) % gifs.length;
         document.getElementById('randomGif').src = gifs[currentIndex];
+        
+        // Remove spinning class after animation completes
+        setTimeout(() => {
+            button.classList.remove('spinning');
+        }, 500);
     }
 </script>
 </body>

@@ -6,10 +6,24 @@
 
 .refresh-button {
     font-size: 20px;
-    padding: 6px 10px;
+    padding: 5px 10px;
     border: 2px solid rgb(212, 212, 212);
     border-radius: 50%;
     background-color: #ffffff;
     color: rgb(84, 140, 252);
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.refresh-button.spinning {
+    animation: spin 0.5s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 } 
