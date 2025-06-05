@@ -4,6 +4,10 @@
 </head>
 <body>
 <h1>Christian Kowalczyk</h1>
+<div class="email-container">
+    <span id="email">chrisjkowalcz@gmail.com</span>
+    <button onclick="copyEmail()" class="copy-button" id="copyButton"><span class="clipboard-icon"></span></button>
+</div>
 <div class="container">
     <img src="gif.gif" alt="A stunning lake" width="300" height="300" id="randomGif">
     <button onclick="changeGif()" class="refresh-button" id="refreshButton">⟳</button>
@@ -31,6 +35,17 @@
         setTimeout(() => {
             button.classList.remove('spinning');
         }, 500);
+    }
+
+    function copyEmail() {
+        const email = document.getElementById('email').textContent;
+        navigator.clipboard.writeText(email).then(() => {
+            const button = document.getElementById('copyButton');
+            button.innerHTML = '<span class="checkmark-icon"></span>';
+            setTimeout(() => {
+                button.innerHTML = '<span class="clipboard-icon"></span>';
+            }, 2000);
+        });
     }
 </script>
 </body>
