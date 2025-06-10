@@ -96,6 +96,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 20px 0;
 }
 
 /* Refresh button */
@@ -125,7 +126,7 @@ h1 {
 
 /* Last.fm section */
 .lastfm-section {
-    margin-top: 20px;
+    margin: 30px 0;
     padding: 0;
     max-width: 800px;
 }
@@ -140,6 +141,7 @@ h1 {
     font-size: 14px;
     transition: all 0.2s;
     margin-bottom: 20px;
+    display: inline-block;
 }
 
 .lastfm-button:hover {
@@ -163,6 +165,7 @@ h1 {
     gap: 20px;
     justify-items: center;
     align-items: start;
+    width: 100%;
 }
 
 .album-card {
@@ -182,7 +185,7 @@ h1 {
     object-fit: cover;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease;
 }
 
 .album-card img:hover {
@@ -211,4 +214,17 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .album-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 } 
