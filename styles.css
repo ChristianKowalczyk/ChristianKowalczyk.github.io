@@ -169,49 +169,37 @@ h1 {
 .lastfm-container h3 {
     color: #333;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
 }
 
-.album-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    justify-items: center;
-    align-items: start;
-    width: 100%;
-}
-
-.album-card {
-    width: 100%;
-    text-align: center;
+.track-card {
+    text-align: left;
+    max-width: 200px;
     display: flex;
-    flex-direction: column;
+    gap: 15px;
     align-items: center;
 }
 
-.album-card img {
-    width: 100%;
-    height: auto;
-    min-width: 120px;
-    max-width: 180px;
-    aspect-ratio: 1;
+.track-card img {
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    flex-shrink: 0;
 }
 
-.album-card img:hover {
+.track-card img:hover {
     transform: scale(1.05);
 }
 
-.album-info {
-    margin-top: 8px;
-    width: 100%;
-    max-width: 180px;
+.track-info {
+    flex-grow: 1;
+    min-width: 0;
 }
 
-.album-name {
+.track-name {
     font-weight: bold;
     color: #333;
     font-size: 14px;
@@ -227,6 +215,14 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* Remove the old album grid styles since we're not using them anymore */
+.album-grid,
+.album-card,
+.album-info,
+.album-name {
+    display: none;
 }
 
 /* Responsive adjustments */
