@@ -173,23 +173,27 @@ h1 {
 }
 
 .album-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    justify-content: center;
+    justify-items: center;
+    align-items: start;
     width: 100%;
 }
 
 .album-card {
-    flex: 0 0 calc(20% - 16px);
-    min-width: 120px;
-    max-width: 180px;
+    width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .album-card img {
     width: 100%;
     height: auto;
+    min-width: 120px;
+    max-width: 180px;
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 4px;
@@ -204,6 +208,7 @@ h1 {
 .album-info {
     margin-top: 8px;
     width: 100%;
+    max-width: 180px;
 }
 
 .album-name {
@@ -226,13 +231,13 @@ h1 {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .album-card {
-        flex: 0 0 calc(33.333% - 14px);
+    .album-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 480px) {
-    .album-card {
-        flex: 0 0 calc(50% - 10px);
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 } 
