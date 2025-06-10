@@ -96,7 +96,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 20px 0;
+    margin: 20px 0 10px 0;
 }
 
 /* Refresh button */
@@ -126,7 +126,7 @@ h1 {
 
 /* Last.fm section */
 .lastfm-section {
-    margin: 30px 0;
+    margin: 0;
     padding: 0;
     max-width: 800px;
 }
@@ -163,12 +163,13 @@ h1 {
 }
 
 .lastfm-container {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .lastfm-container h3 {
     color: #333;
-    margin: 0 0 10px 0;
+    margin: 0;
+    padding: 0;
     text-align: left;
 }
 
@@ -178,6 +179,7 @@ h1 {
     display: flex;
     gap: 15px;
     align-items: center;
+    margin-top: 5px;
 }
 
 .track-card img {
@@ -241,7 +243,7 @@ h1 {
 .repo-list {
     list-style-type: disc;
     padding-left: 20px;
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
 .repo-list li {
