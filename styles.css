@@ -168,7 +168,7 @@ h1 {
 
 .lastfm-container h3 {
     color: #333;
-    margin-bottom: 20px;
+    margin: 0 0 10px 0;
     text-align: left;
 }
 
@@ -236,4 +236,25 @@ h1 {
     .album-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.repo-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.repo-list li {
+    margin: 5px 0;
+}
+
+.repo-list a {
+    color: #0366d6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.repo-list a:hover {
+    color: #024ea4;
+    text-decoration: underline;
 } 
