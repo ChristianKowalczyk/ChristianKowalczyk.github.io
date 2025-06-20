@@ -7,7 +7,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Christian Kowalczyk">
     <meta property="og:description" content="Personal website of Christian Kowalczyk">
-    <meta property="og:image" content="https://christiankowalczyk.github.io/gif/gif.gif">
+    <meta property="og:image" content="https://christiankowalczyk.github.io/gif.gif">
     <meta property="og:url" content="https://christiankowalczyk.github.io">
     <meta property="og:type" content="website">
     
@@ -15,27 +15,19 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Christian Kowalczyk">
     <meta name="twitter:description" content="Personal website of Christian Kowalczyk">
-    <meta name="twitter:image" content="https://christiankowalczyk.github.io/gif/gif.gif">
+    <meta name="twitter:image" content="https://christiankowalczyk.github.io/gif.gif">
     
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!--
-<div class="top-menu">
-    
-    <a href="https://letterboxd.com/chrisidek/" target="_blank" class="lboxd-link">
-        <img src="lboxd.png" alt="Letterboxd" class="lboxd-icon" />
-    </a>
-</div>
--->
 <h1>Christian Kowalczyk</h1>
 <div class="email-container">
     <span id="email">chrisjkowalcz@gmail.com</span>
     <button onclick="copyEmail()" class="copy-button" id="copyButton"><span class="clipboard-icon"></span></button>
 </div>
 <div class="container">
-    <img src="gif/gif.gif" alt="A stunning lake" width="300" height="300" id="randomGif">
-    <button onclick="changeGif()" class="refresh-button" id="refreshButton"><span class="arrow-fly-container"><span class="arrow-fly">↻</span></span></button>
+    <img src="gif.gif" alt="A stunning lake" width="300" height="300" id="randomGif">
+    <button onclick="changeGif()" class="refresh-button" id="refreshButton">⟳</button>
 </div>
 <ul class="repo-list">
     <li><a href="https://github.com/ChristianKowalczyk?tab=repositories" target="_blank">GitHub Repos</a></li>
@@ -49,25 +41,24 @@
 <script src="lastfm.js"></script>
 <script>
     const gifs = [
-        'gif/gif.gif',
-        'gif/gif5.gif',
-        'gif/gif4.gif',
+        'gif.gif',
+        'gif5.gif',
+        'gif4.gif',
         // Add more GIFs to this array
     ];
     let currentIndex = 0;
 
     function changeGif() {
         const button = document.getElementById('refreshButton');
-        const arrow = button.querySelector('.arrow-fly');
-        arrow.classList.add('fly');
+        button.classList.add('spinning');
         
         currentIndex = (currentIndex + 1) % gifs.length;
         document.getElementById('randomGif').src = gifs[currentIndex];
         
-        // Remove fly class after animation completes
+        // Remove spinning class after animation completes
         setTimeout(() => {
-            arrow.classList.remove('fly');
-        }, 700);
+            button.classList.remove('spinning');
+        }, 500);
     }
 
     function copyEmail() {
