@@ -4,6 +4,35 @@ h1 {
     padding: 0;
 }
 
+/* Social media menu */
+.social-menu {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    justify-content: flex-start;
+}
+
+.social-link {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.social-link:hover .social-icon {
+    opacity: 0.8;
+}
+
 /* Email section */
 .email-container {
     display: flex;
