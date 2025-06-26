@@ -72,7 +72,9 @@
         button.classList.add('spinning');
         
         currentIndex = (currentIndex + 1) % gifs.length;
-        document.getElementById('randomGif').src = gifs[currentIndex];
+        const imageElement = document.getElementById('randomGif');
+        imageElement.src = gifs[currentIndex];
+        imageElement.alt = altTexts[currentIndex];
         
         // Remove spinning class after animation completes
         setTimeout(() => {
