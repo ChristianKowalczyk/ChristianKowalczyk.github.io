@@ -144,6 +144,11 @@ h1 {
 .refresh-button {
     width: 34px;
     height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    max-width: 34px;
+    max-height: 34px;
+    flex: 0 0 34px;
     aspect-ratio: 1;
     display: inline-flex;
     align-items: center;
