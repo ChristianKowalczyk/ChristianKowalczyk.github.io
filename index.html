@@ -36,11 +36,13 @@
     <button onclick="copyEmail()" class="copy-button" id="copyButton"><span class="clipboard-icon"></span></button>
 </div>
 <div class="about-container">
-    <p class="about-text">From Pa and live in Nyc, currently work as a Swe for a fast food company</p>
+    <p class="about-text">Currently work as a swe for a fast food company</p>
 </div>
 <div class="container">
     <img src="gifs/gif.gif" alt="A stunning lake" width="300" height="300" id="randomGif">
-    <button onclick="changeGif()" class="refresh-button" id="refreshButton">⟳</button>
+    <button onclick="changeGif()" class="refresh-button" id="refreshButton" aria-label="Change image">
+        <img class="refresh-icon" src="refresh-cw-svgrepo-com.svg" alt="" aria-hidden="true">
+    </button>
 </div>
 <ul class="repo-list">
     <li><a href="https://github.com/ChristianKowalczyk?tab=repositories" target="_blank">GitHub Repos</a></li>
