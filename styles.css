@@ -55,7 +55,7 @@ h1 {
     border: none;
     cursor: pointer;
     padding: 5px;
-    transition: transform 0.2s;
+    transition: transform 0.1s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +65,7 @@ h1 {
 }
 
 .copy-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 /* Clipboard icon */
@@ -120,12 +120,24 @@ h1 {
     border-bottom: 1.5px solid #666;
 }
 
+.about-container {
+    margin: 0 0 12px 0;
+}
+
+.about-text {
+    margin: 0;
+    color: #333;
+    font-size: 1.0em;
+    line-height: 1.4;
+    max-width: 800px;
+}
+
 /* GIF container */
 .container {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 20px 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 /* Refresh button */
@@ -192,7 +204,7 @@ h1 {
 }
 
 .lastfm-container {
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .lastfm-container h3 {
